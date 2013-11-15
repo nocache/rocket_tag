@@ -12,7 +12,6 @@ group :development do
   gem "rspec"
   gem "yard", "~> 0.6.0"
   gem "bundler", "~> 1"
-  gem "jeweler", "~> 1"
   #gem "rcov", ">= 0"
   gem 'sqlite3'
   gem "rake"
