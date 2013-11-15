@@ -3,9 +3,11 @@
 # Instead, edit Jeweler::Tasks in Rakefile, and run 'rake gemspec'
 # -*- encoding: utf-8 -*-
 
+require 'rocket_tag/version'
+
 Gem::Specification.new do |s|
   s.name = "rocket_tag"
-  s.version = "0.5.6"
+  s.version = RocketTag::VERSION
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brad Phelan"]
@@ -16,30 +18,8 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.md"
   ]
-  s.files = [
-    ".document",
-    ".rspec",
-    ".rvmrc",
-    "Gemfile",
-    "Gemfile.lock",
-    "LICENSE.txt",
-    "README.md",
-    "Rakefile",
-    "VERSION",
-    "lib/generators/rocket_tag/migration/migration_generator.rb",
-    "lib/generators/rocket_tag/migration/templates/active_record/migration.rb",
-    "lib/rocket_tag.rb",
-    "lib/rocket_tag/tag.rb",
-    "lib/rocket_tag/taggable.rb",
-    "lib/rocket_tag/tagging.rb",
-    "rocket_tag.gemspec",
-    "spec/database.yml",
-    "spec/models.rb",
-    "spec/rocket_tag/taggable_spec.rb",
-    "spec/schema.rb",
-    "spec/spec_helper.rb"
-  ]
-  s.homepage = "http://github.com/bradphelan/rocket_tag"
+  s.files = `git ls-files`.split($/)
+  s.homepage = "http://github.com/nocache/rocket_tag"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.15"
