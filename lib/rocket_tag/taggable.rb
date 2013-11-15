@@ -347,14 +347,13 @@ module RocketTag
           class_eval do
 
             has_many "#{context}_taggings".to_sym, 
-              :source => :taggable,  
+              :class_name => 'RocketTag::Tagging',
               :as => :taggable,
-              :conditions => { :context => context }
+              :conditions => { :context => context.to_s }
 
             has_many "#{context}_tags".to_sym,
               :source => :tag,
-              :through => :taggings,
-              :conditions => [ "taggings.context = ?", context ]
+              :through => "#{context}_taggings".to_sym
 
             validate context do
               if not send(context).kind_of? Enumerable
