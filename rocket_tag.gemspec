@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rake>, [">= 0"])
     else
       s.add_dependency(%q<activerecord>, [">= 3.2.0"])
-      s.add_dependency(%q<squeel>, ["~> 1.0.0"])
+      s.add_dependency(%q<squeel>, ["~> 1.1.0"])
       s.add_dependency(%q<pg>, [">= 0"])
       s.add_dependency(%q<rspec>, ["~> 2.10.0"])
       s.add_dependency(%q<yard>, ["~> 0.6.0"])
@@ -48,7 +48,7 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<activerecord>, [">= 3.2.0"])
-    s.add_dependency(%q<squeel>, ["~> 1.0.0"])
+    s.add_dependency(%q<squeel>, ["~> 1.1.0"])
     s.add_dependency(%q<pg>, [">= 0"])
     s.add_dependency(%q<rspec>, ["~> 2.10.0"])
     s.add_dependency(%q<yard>, ["~> 0.6.0"])
